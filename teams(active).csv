@@ -1,0 +1,31 @@
+TeamID,Key,Active,City,Name,LeagueID,StadiumID,Conference,Division,PrimaryColor,SecondaryColor,TertiaryColor,QuaternaryColor,WikipediaLogoUrl,WikipediaWordMarkUrl,GlobalTeamID,NbaDotComTeamID
+1,WAS,true,Washington,Wizards,3,1,Eastern,Southeast,E31837,002B5C,C4CED4,FFFFFF,https://upload.wikimedia.org/wikipedia/en/0/02/Washington_Wizards_logo.svg,,20000001,1610612764
+2,CHA,true,Charlotte,Hornets,3,2,Eastern,Southeast,1D1160,00788C,A1A1A4,7AB2DD,https://upload.wikimedia.org/wikipedia/en/c/c4/Charlotte_Hornets_%282014%29.svg,,20000002,1610612766
+3,ATL,true,Atlanta,Hawks,3,3,Eastern,Southeast,E03A3E,C1D32F,26282A,,https://upload.wikimedia.org/wikipedia/en/2/24/Atlanta_Hawks_logo.svg,,20000003,1610612737
+4,MIA,true,Miami,Heat,3,4,Eastern,Southeast,98002E,F9A01B,000000,,https://upload.wikimedia.org/wikipedia/en/f/fb/Miami_Heat_logo.svg,,20000004,1610612748
+5,ORL,true,Orlando,Magic,3,5,Eastern,Southeast,0077C0,000000,C4CED4,,https://upload.wikimedia.org/wikipedia/en/1/10/Orlando_Magic_logo.svg,,20000005,1610612753
+6,NY,true,New York,Knicks,3,6,Eastern,Atlantic,006BB6,F58426,BEC0C2,000000,https://upload.wikimedia.org/wikipedia/en/2/25/New_York_Knicks_logo.svg,,20000006,1610612752
+7,PHI,true,Philadelphia,76ers,3,7,Eastern,Atlantic,ED174C,006BB6,002B5C,FFFFFF,https://upload.wikimedia.org/wikipedia/en/0/0e/Philadelphia_76ers_logo.svg,,20000007,1610612755
+8,BKN,true,Brooklyn,Nets,3,8,Eastern,Atlantic,000000,FFFFFF,,,https://upload.wikimedia.org/wikipedia/commons/4/44/Brooklyn_Nets_newlogo.svg,,20000008,1610612751
+9,BOS,true,Boston,Celtics,3,9,Eastern,Atlantic,008348,BB9753,000000,,https://upload.wikimedia.org/wikipedia/en/8/8f/Boston_Celtics.svg,,20000009,1610612738
+10,TOR,true,Toronto,Raptors,3,10,Eastern,Atlantic,CE1141,000000,A1A1A4,FFFFFF,https://upload.wikimedia.org/wikipedia/en/3/36/Toronto_Raptors_logo.svg,,20000010,1610612761
+11,CHI,true,Chicago,Bulls,3,11,Eastern,Central,CE1141,000000,,,https://upload.wikimedia.org/wikipedia/en/6/67/Chicago_Bulls_logo.svg,,20000011,1610612741
+12,CLE,true,Cleveland,Cavaliers,3,12,Eastern,Central,6F263D,FDB81C,041E42,000000,https://upload.wikimedia.org/wikipedia/en/4/4b/Cleveland_Cavaliers_logo.svg,,20000012,1610612739
+13,IND,true,Indiana,Pacers,3,13,Eastern,Central,002D62,FDBB30,BEC0C2,,https://upload.wikimedia.org/wikipedia/en/1/1b/Indiana_Pacers.svg,,20000013,1610612754
+14,DET,true,Detroit,Pistons,3,14,Eastern,Central,006BB6,ED174C,BEC0C2,FFFFFF,https://upload.wikimedia.org/wikipedia/commons/7/7c/Pistons_logo17.svg,,20000014,1610612765
+15,MIL,true,Milwaukee,Bucks,3,15,Eastern,Central,00471B,EEE1C6,0077C0,000000,https://upload.wikimedia.org/wikipedia/en/4/4a/Milwaukee_Bucks_logo.svg,,20000015,1610612749
+16,MIN,true,Minnesota,Timberwolves,3,16,Western,Northwest,0C2340,78BE20,236192,9EA2A2,https://upload.wikimedia.org/wikipedia/en/c/c2/Minnesota_Timberwolves_logo.svg,,20000016,1610612750
+17,UTA,true,Utah,Jazz,3,17,Western,Northwest,002B5C,F9A01B,00471B,,https://upload.wikimedia.org/wikipedia/en/0/04/Utah_Jazz_logo_%282016%29.svg,,20000017,1610612762
+18,OKC,true,Oklahoma City,Thunder,3,18,Western,Northwest,007AC1,EF3B24,FDBB30,002D62,https://upload.wikimedia.org/wikipedia/en/5/5d/Oklahoma_City_Thunder.svg,,20000018,1610612760
+19,POR,true,Portland,Trail Blazers,3,19,Western,Northwest,E03A3E,000000,FFFFFF,,https://upload.wikimedia.org/wikipedia/en/2/21/Portland_Trail_Blazers_logo.svg,,20000019,1610612757
+20,DEN,true,Denver,Nuggets,3,20,Western,Northwest,00285E,5091CD,FDB927,,https://upload.wikimedia.org/wikipedia/en/7/76/Denver_Nuggets.svg,,20000020,1610612743
+21,MEM,true,Memphis,Grizzlies,3,21,Western,Southwest,00285E,6189B9,BED4E9,FDB927,https://upload.wikimedia.org/wikipedia/en/f/f1/Memphis_Grizzlies.svg,,20000021,1610612763
+22,HOU,true,Houston,Rockets,3,22,Western,Southwest,CE1141,C4CED4,000000,FFFFFF,https://upload.wikimedia.org/wikipedia/en/2/28/Houston_Rockets.svg,,20000022,1610612745
+23,NO,true,New Orleans,Pelicans,3,23,Western,Southwest,002B5C,B4975A,E31837,,https://upload.wikimedia.org/wikipedia/en/0/0d/New_Orleans_Pelicans_logo.svg,,20000023,1610612740
+24,SA,true,San Antonio,Spurs,3,24,Western,Southwest,000000,C4CED4,,,https://upload.wikimedia.org/wikipedia/en/a/a2/San_Antonio_Spurs.svg,,20000024,1610612759
+25,DAL,true,Dallas,Mavericks,3,25,Western,Southwest,0053BC,BBC4CA,000000,,https://upload.wikimedia.org/wikipedia/en/9/97/Dallas_Mavericks_logo.svg,,20000025,1610612742
+26,GS,true,Golden State,Warriors,3,26,Western,Pacific,006BB6,FDB927,26282A,,https://upload.wikimedia.org/wikipedia/en/0/01/Golden_State_Warriors_logo.svg,,20000026,1610612744
+27,LAL,true,Los Angeles,Lakers,3,27,Western,Pacific,552583,FDB927,000000,,https://upload.wikimedia.org/wikipedia/commons/3/3c/Los_Angeles_Lakers_logo.svg,,20000027,1610612747
+28,LAC,true,Los Angeles,Clippers,3,27,Western,Pacific,ED174C,006BB6,87ceeb,000000,https://upload.wikimedia.org/wikipedia/en/b/bb/Los_Angeles_Clippers_%282015%29.svg,,20000028,1610612746
+29,PHO,true,Phoenix,Suns,3,28,Western,Pacific,1D1160,E56020,000000,F9A01B,https://upload.wikimedia.org/wikipedia/en/d/dc/Phoenix_Suns_logo.svg,,20000029,1610612756
+30,SAC,true,Sacramento,Kings,3,29,Western,Pacific,5A2B81,63727A,000000,FFFFFF,https://upload.wikimedia.org/wikipedia/en/c/c7/SacramentoKings.svg,,20000030,1610612758
