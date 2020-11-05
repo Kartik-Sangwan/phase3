@@ -67,7 +67,7 @@ create table TeamStats(
 	foreign key (TeamID) references Teams
 );
 
-create table standings (
+create table Standings (
 	TeamID integer primary key,
 	Wins integer,
 	Losses integer,
@@ -84,7 +84,7 @@ create table standings (
 	foreign key (TeamID) references Teams
 );
 
-create table allstar(
+create table Allstar(
     PlayerID integer primary key,
     Name varchar(30),
     TeamID integer not null,
