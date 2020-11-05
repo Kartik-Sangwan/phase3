@@ -1,18 +1,14 @@
 import pandas as pd
 import numpy as np
 
-file = pd.read_csv("playerDetail.csv")
+file = pd.read_csv("allstar.csv")
 
-keep_col = ["PlayerID",
-            "Name",
-            "Status",
-            "TeamID",
-            "Position",
-            "Height",
-            "Weight",
-            "Salary",
-            "Experience",
-            "College"]
+all_stars = ["PlayerID",
+             "Name",
+             "TeamID",
+             'Team',
+             'Position']
 
-new_f = file[keep_col]
-new_f.to_csv("playerDetail.csv", index=False)
+new_f = file[all_stars]
+# new_f.rename(columns={"Minutes": "MinuteTotal"}, inplace=True)
+new_f.to_csv("allstar.csv", index=False)

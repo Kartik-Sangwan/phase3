@@ -1,4 +1,4 @@
-drop schema if exists NBAschema cascade; 
+drop schema if exists NBAschema cascade;
 create schema NBAschema;
 set search_path to NBAschema;
 
@@ -29,6 +29,7 @@ create table Player(
 create table PlayerStats(
 	StatID integer primary key,
 	TeamID integer,
+	PlayerID integer not null,
 	Name varchar(30),
 	FantasyPoints integer,
 	MinutesTotal float,
@@ -36,11 +37,12 @@ create table PlayerStats(
 	FieldGoalsAttempted integer,
 	EffectiveFieldGoalsPercentage float,
 	TwoPointersMade integer,
-	ThreePointerMade integer,
-	FreeThrowsAttempted integer, 
+	ThreePointersMade integer,
+	FreeThrowsAttempted integer,
 	Rebounds integer,
 	PersonalFouls integer,
 	AssistsPercentage float,
+	unique (PlayerID),
 	foreign key (Name) references Player(Name)
 );
 
@@ -55,11 +57,11 @@ create table TeamStats(
 	FieldGoalsMade integer,
 	FieldGoalsPercentage float,
 	TwoPointersMade integer,
-	ThreePointerAttempted integer,
-	FreeThrowsMade integer, 
+	ThreePointerMade integer,
+	FreeThrowsMade integer,
 	DefensiveRebounds integer,
 	Assists integer,
-	steals integer,
+	Steals integer,
 	TrueShootingPercentage float,
 	AssistPercentage float,
 	foreign key (TeamID) references Teams
@@ -71,7 +73,7 @@ create table standings (
 	Losses integer,
 	ConferenceLosses integer,
 	ConferenceWins integer,
-	DivisonWins integer,
+	DivisionWins integer,
 	DivisionLosses integer,
 	HomeWins integer,
 	HomeLosses integer,
@@ -82,12 +84,11 @@ create table standings (
 	foreign key (TeamID) references Teams
 );
 
-create table betting(
-	TeamID integer primary key,
-	WinsAgainstTheSpread integer, 
-	LossesAgainstTheSpread integer,
-	pushesAgainstTheSpread integer, 
-	AverageScore float,
-	AverageOpponentScore float,
-	foreign key (TeamID) references Teams
+create table allstar(
+    PlayerID integer primary key,
+    Name varchar(30),
+    TeamID integer not null,
+    Team varchar(30),
+    Position varchar(30),
+	foreign key (PlayerID) references Player
 );
