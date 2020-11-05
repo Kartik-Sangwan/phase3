@@ -31,19 +31,19 @@ create table PlayerStats(
 	TeamID integer,
 	PlayerID integer not null,
 	Name varchar(30),
-	FantasyPoints integer,
+	FantasyPoints float,
 	MinutesTotal float,
-	FieldGoalsMade integer,
-	FieldGoalsAttempted integer,
+	FieldGoalsMade float,
+	FieldGoalsAttempted float,
 	EffectiveFieldGoalsPercentage float,
-	TwoPointersMade integer,
-	ThreePointersMade integer,
-	FreeThrowsAttempted integer,
-	Rebounds integer,
-	PersonalFouls integer,
+	TwoPointersMade float,
+	ThreePointersMade float,
+	FreeThrowsAttempted float,
+	Rebounds float,
+	PersonalFouls float,
 	AssistsPercentage float,
 	unique (PlayerID),
-	foreign key (Name) references Player(Name)
+	foreign key (PlayerID) references Player
 );
 
 
@@ -54,16 +54,15 @@ create table TeamStats(
 	Losses integer,
 	Possessions float,
 	Minutes float,
-	FieldGoalsMade integer,
+	FieldGoalsMade float,
 	FieldGoalsPercentage float,
-	TwoPointersMade integer,
-	ThreePointerMade integer,
-	FreeThrowsMade integer,
-	DefensiveRebounds integer,
-	Assists integer,
-	Steals integer,
+	TwoPointersMade float,
+	ThreePointerMade float,
+	FreeThrowsMade float,
+	DefensiveRebounds float,
+	Assists float,
+	Steals float,
 	TrueShootingPercentage float,
-	AssistPercentage float,
 	foreign key (TeamID) references Teams
 );
 
