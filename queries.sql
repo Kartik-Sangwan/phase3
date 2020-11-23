@@ -54,25 +54,27 @@ DROP VIEW IF EXISTS Combined CASCADE;
 --Q3
 -- Overall Standings and general information that might be useful to teams/managers
 
---(H) Number of AllStar Players that are in the Team and the average salary for that team players.
--- Warriors have the highest salary as they have the most AllStart Players.
+--(H) Finding Number of AllStar Players that are in the Team and the average salary for that team players.
+
 create VIEW AvgSalary as 
 select Teams.TeamID, Teams.Name, count(*) as numPlayers, ROUND(avg(Player.salary)) as avgSalary
 from Teams left join Player
 on Teams.TeamID = Player.TeamID 
 group by Teams.TeamID;
-
 -- Average Salary of players for each team
 select * from AvgSalary;
+
+
 --(I) Finding the number of allStars in each team
 create VIEW NumAllStar as 
 select Teams.TeamID, count(*) as allStars
 from Teams, Allstar, Player
 where Teams.TeamID = Allstar.TeamID and Allstar.PlayerID = Player.PlayerID
 group by Teams.TeamID;
-
 -- Number of AllStar players in each team
 select * from NumAllStar;
+
+
 --(J) Combining query (H) and (I)
 create VIEW Combined as 
 select AvgSalary.TeamID, Name, avgSalary, COALESCE(allStars, 0) as Allstars
