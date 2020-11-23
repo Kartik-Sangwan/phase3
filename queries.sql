@@ -47,6 +47,9 @@ from Player, PlayerStats
 where PlayerStats.PlayerID = Player.PlayerID
 order by Experience;
 
+DROP VIEW IF EXISTS AvgSalary CASCADE;
+DROP VIEW IF EXISTS NumAllStar CASCADE;
+DROP VIEW IF EXISTS Combined CASCADE;
 
 --Q3
 -- Overall Standings and general information that might be useful to teams/managers
