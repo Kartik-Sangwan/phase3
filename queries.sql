@@ -47,6 +47,7 @@ from Player, PlayerStats
 where PlayerStats.PlayerID = Player.PlayerID
 order by Experience;
 
+
 --Q3
 -- Overall Standings and general information that might be useful to teams/managers
 
@@ -57,6 +58,8 @@ select Teams.TeamID, Teams.Name, count(*) as numPlayers, ROUND(avg(Player.salary
 from Teams left join Player
 on Teams.TeamID = Player.TeamID 
 group by Teams.TeamID;
+
+-- Average Salary of players for each team
 select * from AvgSalary;
 --(I) Finding the number of allStars in each team
 create VIEW NumAllStar as 
@@ -64,6 +67,8 @@ select Teams.TeamID, count(*) as allStars
 from Teams, Allstar, Player
 where Teams.TeamID = Allstar.TeamID and Allstar.PlayerID = Player.PlayerID
 group by Teams.TeamID;
+
+-- Number of AllStar players in each team
 select * from NumAllStar;
 --(J) Combining query (H) and (I)
 create VIEW Combined as 
@@ -71,6 +76,9 @@ select AvgSalary.TeamID, Name, avgSalary, COALESCE(allStars, 0) as Allstars
 from AvgSalary left join NumAllStar
 on AvgSalary.TeamID = NumAllStar.TeamID
 order by avgSalary;
+
+-- Number of AllStar Players that are in the Team and the average salary for that team players.
+-- Warriors have the highest salary as they have the most AllStart Players
 select * from Combined;
 
 --
