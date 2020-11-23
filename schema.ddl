@@ -24,6 +24,7 @@ create table Player(
 	College varchar(30),
 	unique (Name),
 	foreign key (TeamID) references teams
+	on delete RESTRICT on update Restrict
 );
 
 create table PlayerStats(
@@ -44,6 +45,7 @@ create table PlayerStats(
 	AssistsPercentage float,
 	unique (PlayerID),
 	foreign key (PlayerID) references Player
+	on delete RESTRICT on update Restrict
 );
 
 
@@ -64,6 +66,7 @@ create table TeamStats(
 	Steals float,
 	TrueShootingPercentage float,
 	foreign key (TeamID) references Teams
+	on delete RESTRICT on update Restrict
 );
 
 create table Standings (
@@ -81,6 +84,7 @@ create table Standings (
 	LastTenLosses integer,
 	Streak float,
 	foreign key (TeamID) references Teams
+	on delete RESTRICT on update Restrict
 );
 
 create table Allstar(
@@ -90,4 +94,5 @@ create table Allstar(
     Team varchar(30),
     Position varchar(30),
 	foreign key (PlayerID) references Player
+	on delete RESTRICT on update Restrict
 );

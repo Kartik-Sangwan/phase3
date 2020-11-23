@@ -20,9 +20,11 @@ from Teams, TeamStats
 where Teams.TeamID = TeamStats.TeamID and 
 TeamStats.Assists <= all (select Assists from TeamStats); 
 
---(D) Average number FreeThrows made in 2019 season.
-select avg(TeamStats.FreeThrowsMade) 
-from TeamStats;
+--(D) Team with the longest winning streak in 2019 season.
+select Teams.TeamID, Teams.Name 
+from Teams, Standings
+where Teams.TeamID = Standings.TeamID 
+and Standings.streak >= all (select streak from Standings); 
 
 --Q2
 -- Player Stats
@@ -50,25 +52,25 @@ order by Experience;
 
 --(H) Number of AllStar Players that are in the Team and the average salary for that team players.
 -- Warriors have the highest salary as they have the most AllStart Players.
-CREATE VIEW AvgSalary as 
+create VIEW AvgSalary as 
 select Teams.TeamID, Teams.Name, count(*) as numPlayers, ROUND(avg(Player.salary)) as avgSalary
 from Teams left join Player
 on Teams.TeamID = Player.TeamID 
 group by Teams.TeamID;
-
+select * from AvgSalary;
 --(I) Finding the number of allStars in each team
-CREATE VIEW NumAllStar as 
+create VIEW NumAllStar as 
 select Teams.TeamID, count(*) as allStars
 from Teams, Allstar, Player
 where Teams.TeamID = Allstar.TeamID and Allstar.PlayerID = Player.PlayerID
 group by Teams.TeamID;
-
+select * from NumAllStar;
 --(J) Combining query (H) and (I)
-CREATE VIEW Combined as 
+create VIEW Combined as 
 select AvgSalary.TeamID, Name, avgSalary, COALESCE(allStars, 0) as Allstars
 from AvgSalary left join NumAllStar
 on AvgSalary.TeamID = NumAllStar.TeamID
 order by avgSalary;
-
+select * from Combined;
 
 --
